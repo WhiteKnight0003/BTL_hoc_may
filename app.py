@@ -3,7 +3,6 @@ import joblib
 import pandas as pd
 import os
 
-# --- CẤU HÌNH TRANG ---
 st.set_page_config(
     page_title="AI Phát hiện Tin giả",
     page_icon="🕵️‍♀️",
@@ -48,7 +47,7 @@ def display_result(prediction):
         st.error(f"🚨 {result_text}")
     else:
         st.success(f"✅ {result_text}")
-        
+
 def main():
     st.title("🕵️‍♀️ Hệ thống Phát hiện Tin giả")
     st.markdown("Nhập tiêu đề và nội dung bài báo để kiểm tra độ tin cậy.")
@@ -104,3 +103,5 @@ def main():
 if __name__ == "__main__":
     main()
 
+# pip install streamlit joblib pandas scikit-learn
+# streamlit run app.py
